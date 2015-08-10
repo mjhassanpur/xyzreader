@@ -8,8 +8,6 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -90,13 +88,6 @@ public class ArticleDetailFragment extends Fragment implements
             Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
 
-        CollapsingToolbarLayout collapsingToolbarLayout =
-                (CollapsingToolbarLayout) mRootView.findViewById(R.id.collapsingToolbarLayout);
-        AppBarLayout.LayoutParams params =
-                (AppBarLayout.LayoutParams) collapsingToolbarLayout.getLayoutParams();
-        params.setMargins(0, getStatusBarHeight(), 0, 0);
-        collapsingToolbarLayout.setLayoutParams(params);
-
         Toolbar toolbar = (Toolbar) mRootView.findViewById(R.id.toolbar);
         AppCompatActivity activity = ((AppCompatActivity) getActivity());
         activity.setSupportActionBar(toolbar);
@@ -116,18 +107,6 @@ public class ArticleDetailFragment extends Fragment implements
 
         bindViews();
         return mRootView;
-    }
-
-    /**
-     * @see <a href="http://stackoverflow.com/questions/3355367/height-of-statusbar/3356263#3356263"></a>
-     */
-    public int getStatusBarHeight() {
-        int result = 0;
-        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
-        if (resourceId > 0) {
-            result = getResources().getDimensionPixelSize(resourceId);
-        }
-        return result;
     }
 
     private void bindViews() {
