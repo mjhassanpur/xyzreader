@@ -5,12 +5,24 @@
     <dimen name="detail_body_text_size">14sp</dimen>
     <dimen name="list_caption_text_size">14sp</dimen>
 
+    <dimen name="text_view_padding">16dp</dimen>
+    <dimen name="text_view_padding_bottom">4dp</dimen>
+
     <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.25</item>
 
     <dimen name="app_bar_height">256dp</dimen>
 
+    <dimen name="article_list_recycler_view_padding_top">24dp</dimen>
+    <dimen name="article_list_recycler_view_padding_bottom">28dp</dimen>
+
+    <dimen name="article_list_thumbnail_width">100dp</dimen>
+
+    <dimen name="card_view_margin">4dp</dimen>
+
     <dimen name="fab_elevation">4dp</dimen>
     <dimen name="fab_press_translation_z">6dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
+    <dimen name="fab_borderwidth">0dp</dimen>
+    <dimen name="elevation_standard">2dp</dimen>
 
 </resources>
